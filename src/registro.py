@@ -1,4 +1,4 @@
-user = []
+from src.database import users
 
 def registro ():
     print("------REGISTRO DE USUARIO------")
@@ -11,5 +11,5 @@ def registro ():
         "email": email,
         "password": password
     }
-    user.append(new_user)
+    users.append(new_user)
     print("Registro exitoso")
