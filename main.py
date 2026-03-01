@@ -1,7 +1,7 @@
-from src.database import users
 from src.registro import registro
 from src.inicioSesion import login
 from src.dashboard import dashboard
+from src.admin import login_admin
 
 def menuPrincipal():
     while True:
@@ -9,16 +9,16 @@ def menuPrincipal():
         
         opcion= input("\n Seleeciona una opción:")
         if opcion == "1":
-            if registro():
-                print("\n Registrando...")
-                
+            registro()  
         elif opcion =="2":
-            if login():
-                dashboard()
+            user_logueado= login()
+            if user_logueado:
+                dashboard(user_logueado)
         elif opcion =="3":
-            
-        elif opcion =="4":
-            
+            login_admin()
         else:
             print("\n[!] Opción no válida. Inténtalo de nuevo.")
-            input("Presiona Enter para continuar...")
+            input("Presiona Enter para continuar")
+            
+if __name__ == "__main__":
+    menuPrincipal()

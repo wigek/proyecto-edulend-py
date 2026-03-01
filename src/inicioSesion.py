@@ -6,13 +6,15 @@ def login():
     password_joined= input("Ingresa tú contraseña: ")
     
     users_found = None
-    for u in users:
-        if u["email"]== email_joined and u["password"] == password_joined:
-            users_found= u
+    for i in users:
+        if i["email"]== email_joined and i["password"] == password_joined:
+            users_found= i
             break
     
     if users_found:
         print(f"\nBienvenido de nuevo, {users_found['name']}")
+        return users_found
     else:
         print ("\n ERROR: Credenciales incorrectas \n Intentalo de nuevo")
         input("Presiona enter para volver al menú")
+        return None

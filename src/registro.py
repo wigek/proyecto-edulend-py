@@ -13,3 +13,4 @@ def registro ():
     }
     users.append(new_user)
     print("Registro exitoso")
+    return True

@@ -30,9 +30,10 @@ def dashboard(user_current):
         elif opcion == "3":
             print(f"\nNombre:{user_current['name']}")
             print(f"\nCorreo electronico:{user_current['email']}")
-            print("\n Presiona Enter para volver")
+            input("\nPresiona Enter para volver al dashboard")
         elif opcion == "4":
-            print("\nEdulend")
+            print("\nSomos Edulend, una plataforma para gestionar el préstamo de artículos tecnológicos y educativos. ")
+            input("\nPresiona Enter para volver al dashboard")
         elif opcion == "5":
             print("\nCerrando sesión...")
             break 
